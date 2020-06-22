@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main" class="center">
+        <!-- Header Section Start -->
+        <header>
+            <h3 class="center">Flash Card</h3>
+        </header>
+        <!-- Header Section End -->
+
+
+        <!-- Category Selector Start -->
+        <section id="chooseCat" class="center margin">
+            <select id="category" onchange="chgList(this)">
+                <option value="greetings">Greetings</option>
+                <option value="bodyParts">Body Parts</option>
+                <option value="colors">Colors</option>
+            </select>
+        </section>
+        <!-- Category Selector End -->
+
+
+        <!-- Image Display Start -->
+            <section id="targetImg" class="center margin">
+                <img src="" alt="">
+                <div id="wrd" class="trgWrd"></div>
+            </section>
+        <!-- Image Display End -->
+
+
+        <!-- Flip Button Start -->
+        <section id="pagination" class="center margin">
+            <a href="#">
+                <section id="prevWord" class="pgBtn center margin">
+                    <p id="prev" onclick="prvWrd()"><<</p>
+                </section>
+                <a href="#">
+                    <section id="flipWord" class="pgBtn center margin">
+                        <p id="flip" onclick="flipWrd()">Flip</p>
+                    </section>
+                </a>
+                <a href="#">
+                    <section id="nextWord" class="pgBtn center margin">
+                        <p id="next" onclick="nxtWrd()">>></p>
+                    </section>
+                </a>
+            </a>
+        </section>
+        <!-- Flip Button  End -->
+
+
+        <!-- Language Selector Start -->
+        <section id="swapLangBtn" class="center margin">
+            <select id="target1" onchange="setList(this)">
+                <option value="English">English</option>
+                <option value="Swahili">Swahili</option>
+            </select>
+            <input id="swapBtn" type="button" value="<=>" onclick="swapTargets()">
+            <select id="target2" onchange="setList(this)">
+                <option value="English">English</option>
+                <option value="Swahili">Swahili</option>
+            </select>
+        </section>
+        <!-- Language Selector End -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
